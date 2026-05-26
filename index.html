@@ -39,6 +39,7 @@
             border-radius: 4px;
             overflow-x: auto;
             font-family: monospace;
+            border: 1px solid #e0e0e0;
         }
         .section {
             margin-bottom: 30px;
@@ -65,10 +66,10 @@
             <h2>How to Run Locally</h2>
             <p>To run this Streamlit application locally:</p>
             <div class="code-block">
-                git clone https://github.com/Venkat8870/mistral-demo.git<br>
-                cd mistral-demo<br>
-                pip install streamlit<br>
-                streamlit run asml_ai_board.py
+                <pre>git clone https://github.com/Venkat8870/mistral-demo.git
+cd mistral-demo
+pip install streamlit
+streamlit run asml_ai_board.py</pre>
             </div>
         </div>
         
@@ -97,7 +98,7 @@
         <div class="section">
             <h2>Source Code Preview</h2>
             <div class="code-block">
-import streamlit as st
+                <pre>import streamlit as st
 
 # Set page title
 st.title("ASML AI Board")
@@ -110,7 +111,7 @@ if st.button("Search"):
         # Here you would add the actual search functionality
         # For now, it just displays what would be searched
     else:
-        st.warning("Please enter a search term")
+        st.warning("Please enter a search term")</pre>
             </div>
         </div>
         
