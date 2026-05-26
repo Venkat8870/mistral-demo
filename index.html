@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASML AI Board - Mistral Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .btn {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .code-block {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ASML AI Board - Mistral Demo</h1>
+        
+        <div class="section">
+            <h2>About This Project</h2>
+            <p>This repository contains a Streamlit application for ASML AI Board with search functionality.</p>
+            <p>The application implements Jira user story MP-3: "Add a Search Button to the python file".</p>
+        </div>
+        
+        <div class="section">
+            <h2>View the Code</h2>
+            <p>You can view the main application code here:</p>
+            <p><a href="asml_ai_board.py" class="btn">View asml_ai_board.py</a></p>
+        </div>
+        
+        <div class="section">
+            <h2>How to Run Locally</h2>
+            <p>To run this Streamlit application locally:</p>
+            <div class="code-block">
+                git clone https://github.com/Venkat8870/mistral-demo.git<br>
+                cd mistral-demo<br>
+                pip install streamlit<br>
+                streamlit run asml_ai_board.py
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Deploy to Streamlit Cloud</h2>
+            <p>To deploy this application to Streamlit Cloud:</p>
+            <ol>
+                <li>Go to <a href="https://share.streamlit.io/">Streamlit Cloud</a></li>
+                <li>Click "New app" and connect your GitHub account</li>
+                <li>Select this repository (Venkat8870/mistral-demo)</li>
+                <li>Set the main file path to: <code>asml_ai_board.py</code></li>
+                <li>Click "Deploy"</li>
+            </ol>
+        </div>
+        
+        <div class="section">
+            <h2>Application Features</h2>
+            <ul>
+                <li>ASML AI Board title display</li>
+                <li>Search input field</li>
+                <li>Search button with validation</li>
+                <li>Basic search display functionality</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Source Code Preview</h2>
+            <div class="code-block">
+import streamlit as st
+
+# Set page title
+st.title("ASML AI Board")
+
+# Add search button as per user story MP-3
+search_query = st.text_input("Search", "")
+if st.button("Search"):
+    if search_query:
+        st.write(f"Searching for: {search_query}")
+        # Here you would add the actual search functionality
+        # For now, it just displays what would be searched
+    else:
+        st.warning("Please enter a search term")
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Repository Info</h2>
+            <p><strong>Repository:</strong> <a href="https://github.com/Venkat8870/mistral-demo">Venkat8870/mistral-demo</a></p>
+            <p><strong>Last Updated:</strong> May 26, 2026</p>
+            <p><strong>Status:</strong> Ready for deployment</p>
+        </div>
+    </div>
+</body>
+</html>
